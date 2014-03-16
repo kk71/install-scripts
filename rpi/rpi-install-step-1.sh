@@ -1,4 +1,4 @@
-#!/bin/base
+#!/bin/bash
 
 echo "RPi arch linux arm auto install script"
 echo ""
@@ -10,8 +10,7 @@ echo ": create www user account"
 useradd -d /www www
 passwd www
 mkdir /www
-cd
-chown www www
+chown www /www
 
 echo ": change hostname"
 echo "kkpi" > /etc/hostname

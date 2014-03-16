@@ -22,8 +22,9 @@ systemctl start goagent
 export http_proxy=http://127.0.0.1:8087
 sleep 6s;
 
-pacman --noconfirm -S imagemagick links lynx htop unzip unrar fish dhcp bind hostapd ntp ppp
+pacman --noconfirm -S imagemagick links lynx htop unzip unrar fish ntp ppp
 systemctl enable ntpd
+systemctl start ntpd
 
 pacman --noconfirm -S mplayer moc
 pacman --noconfirm -S sqlite3 mariadb redis
